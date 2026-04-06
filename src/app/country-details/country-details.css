@@ -14,11 +14,11 @@
 
 .country-details-top {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
-  align-items: start;
+  align-items: flex-start;
 }
-
 .country-details-top img {
   width: 220px;
   height: 140px;

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class Country {
-  // Add cca3 to the list so link generation in Home works (country.cca3 is defined).
+
   private apiUrl = 'https://restcountries.com/v3.1/all?fields=name,flags,capital,region,population,currencies,cca3';
 
   constructor(private http: HttpClient) {}

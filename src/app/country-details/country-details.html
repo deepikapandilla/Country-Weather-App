@@ -1,42 +1,11 @@
-<!-- <div *ngIf="loading">
-  <p>Loading country details...</p>
-</div>
-
-<div *ngIf="!loading && errorMessage">
-  <p style="color:red">{{ errorMessage }}</p>
-</div>
-
-<div *ngIf="!loading && country">
-  <h2>{{ country.name?.common }}</h2>
-  <img [src]="country.flags?.png" width="200">
-  <p><strong>Region:</strong> {{ country.region }}</p>
-  <p><strong>Capital:</strong> {{ country.capital?.[0] }}</p>
-  <p><strong>Population:</strong> {{ country.population | number }}</p>
-  <p><strong>Currencies:</strong>
-    <span *ngFor="let c of country.currencies | keyvalue; let last = last">
-      {{ c.value.name }} ({{ c.value.symbol }})<span *ngIf="!last">, </span>
-    </span>
-  </p>
-  <div *ngIf="country.capital?.[0]">
-  <button (click)="showWeather = !showWeather">
-    {{ showWeather ? 'Hide Weather' : 'View Weather' }}
-  </button>
-
-  <app-weather-details *ngIf="showWeather" [capital]="country.capital[0]"></app-weather-details>
-</div>
-  <button routerLink="/">⬅ Back</button>
-</div> -->
-<!-- Loading -->
 <div *ngIf="loading" class="loading">
   <p>Loading country details...</p>
 </div>
 
-<!-- Error -->
 <div *ngIf="!loading && errorMessage" class="error">
   <p>{{ errorMessage }}</p>
 </div>
 
-<!-- Country Details -->
 <div *ngIf="!loading && country" class="country-details-shell">
   <h2>{{ country.name?.common }}</h2>
 

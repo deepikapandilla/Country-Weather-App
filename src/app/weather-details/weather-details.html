@@ -1,14 +1,11 @@
-<!-- Loading -->
 <div *ngIf="loading" class="weather-loading">
   <p>Loading weather...</p>
 </div>
 
-<!-- Error -->
 <div *ngIf="!loading && errorMessage" class="weather-error">
   <p>{{ errorMessage }}</p>
 </div>
 
-<!-- Weather Info -->
 <div *ngIf="!loading && weather" class="weather-card">
   <h3>Weather in {{ capital }}</h3>
 

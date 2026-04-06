@@ -10,7 +10,7 @@ import { Weather } from '../services/weather';
   styleUrls: ['./weather-details.css']
 })
 export class WeatherDetails implements OnInit {
-  @Input() capital: string = ''; // receive capital from country-details
+  @Input() capital: string = '';
   weather: any = null;
   loading = true;
   errorMessage = '';
