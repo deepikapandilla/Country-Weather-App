@@ -1,0 +1,39 @@
+<!-- Loading -->
+<div *ngIf="loading" class="weather-loading">
+  <p>Loading weather...</p>
+</div>
+
+<!-- Error -->
+<div *ngIf="!loading && errorMessage" class="weather-error">
+  <p>{{ errorMessage }}</p>
+</div>
+
+<!-- Weather Info -->
+<div *ngIf="!loading && weather" class="weather-card">
+  <h3>Weather in {{ capital }}</h3>
+
+  <div class="weather-main">
+    <img [src]="weather.icon" alt="Weather icon" class="weather-icon">
+    <div class="temperature">
+      <span class="temp-value">{{ weather.temp }}</span>
+      <span class="temp-unit">°C</span>
+    </div>
+  </div>
+
+  <div class="weather-details">
+    <div class="detail-row">
+      <span class="label">Condition:</span>
+      <span class="value">{{ weather.condition | titlecase }}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Humidity:</span>
+      <span class="value">{{ weather.humidity }}%</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Wind Speed:</span>
+      <span class="value">{{ weather.windSpeed }} m/s</span>
+    </div>
+  </div>
+</div>

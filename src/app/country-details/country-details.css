@@ -1,0 +1,73 @@
+.country-details-shell {
+  max-width: 900px;
+  margin: 18px auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.country-details-shell h2 {
+  margin-top: 0;
+  color: #1f2937;
+}
+
+.country-details-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: start;
+}
+
+.country-details-top img {
+  width: 220px;
+  height: 140px;
+  object-fit: contain;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.country-details-info {
+  flex: 1;
+}
+
+.country-details-info p {
+  margin: 4px 0;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.btn-group {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: transform .15s ease, background .2s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+button:focus {
+  outline: 2px solid #93c5fd;
+}
+
+.loading, .error {
+  text-align: center;
+  color: #334155;
+  margin: 20px 0;
+}
+
+.error {
+  color: #dc2626;
+}

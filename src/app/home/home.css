@@ -1,0 +1,138 @@
+.home-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.home-shell h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  width: min(520px, 100%);
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.07);
+  font-size: 1rem;
+}
+
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.country-card {
+  background: white;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.country-card:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.country-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.country-name-link {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+.country-name-link:hover {
+  text-decoration: underline;
+}
+
+.country-flag {
+  width: auto;
+  height: 76px;
+  display: block;
+  margin: 8px auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.country-info {
+  padding: 12px;
+}
+
+.country-info h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.country-info p {
+  margin: 4px 0;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.search-container input {
+  width: calc(100% - 32px);
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.search-container {
+  margin-bottom: 24px;
+}
+
+.country-grid {
+  gap: 26px;
+}
+
+.country-card {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.country-card:last-child {
+  border-bottom: none;
+}
+
+.country-info {
+  padding: 12px;
+}
+
+.country-info h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  color: #1f2937;
+}
+
+.country-info p {
+  margin: 2px 0;
+  color: #334155;
+  font-size: 0.9rem;
+}
+
+.no-results {
+  text-align: center;
+  color: #64748b;
+}

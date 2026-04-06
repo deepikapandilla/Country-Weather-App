@@ -1,0 +1,31 @@
+<div class="home-shell">
+  <h1>Country Weather Explorer</h1>
+
+  <div class="search-container">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (input)="filterCountries()"
+      placeholder="Search countries..."
+      aria-label="Filter countries"
+    >
+  </div>
+
+  <div *ngIf="filteredCountries.length; else noResult" class="country-grid">
+    <div *ngFor="let country of filteredCountries" class="country-card">
+      <img [src]="country.flags?.png" alt="Flag of {{ country.name?.common }}" class="country-flag">
+      <div class="country-info">
+        <h3>
+          <a *ngIf="country.cca3" [routerLink]="['/country', country.cca3]" class="country-name-link">{{ country.name?.common }}</a>
+          <span *ngIf="!country.cca3">{{ country.name?.common }}</span>
+        </h3>
+        <p><strong>Region:</strong> {{ country.region || 'N/A' }}</p>
+        <p><strong>Capital:</strong> {{ country.capital?.[0] || 'N/A' }}</p>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noResult>
+    <p class="no-results">No countries found.</p>
+  </ng-template>
+</div>
